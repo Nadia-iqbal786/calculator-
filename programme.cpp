@@ -1,15 +1,24 @@
 #include <iostream>
 using namespace std;
+
 int main() {
-double num1, num2, result;
-char operation;
-cout << "Enter the first number: ";
-cin >> num1;
-cout << "Enter the second number: ";
-cin >> num2;
-cout << "Choose an operation (+, -, *, /): ";
-cin >> operation;
-switch (operation) {
+    // Declare variables to store numbers and the operation
+    double num1, num2, result;
+    char operation;
+
+    // Ask the user to input two numbers
+    cout << "Enter the first number: ";
+    cin >> num1;
+
+    cout << "Enter the second number: ";
+    cin >> num2;
+
+    // Ask the user for the desired operation
+    cout << "Choose an operation (+, -, *, /): ";
+    cin >> operation;
+
+    // Perform the chosen operation
+    switch (operation) {
         case '+':
             result = num1 + num2;
             cout << "The result of addition is: " << result << endl;
@@ -23,7 +32,7 @@ switch (operation) {
             cout << "The result of multiplication is: " << result << endl;
             break;
         case '/':
-            if (num2 != 0) {
+            if (num2 != 0) { // Check for division by zero
                 result = num1 / num2;
                 cout << "The result of division is: " << result << endl;
             } else {
